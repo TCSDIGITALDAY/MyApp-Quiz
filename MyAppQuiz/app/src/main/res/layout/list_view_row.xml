@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:clickable="true"
+    >
+
+
+                <TextView
+                    android:id="@+id/lineItem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:maxLines="5"
+                    android:text="Description"
+                    android:textSize="16sp"
+                    />
+
+
+    <!--android:ellipsize="marquee"-->
+    <!--<span style="text-decoration: underline;">android:text=<i>"TextView"</i></span> />-->
+
+
+</RelativeLayout>

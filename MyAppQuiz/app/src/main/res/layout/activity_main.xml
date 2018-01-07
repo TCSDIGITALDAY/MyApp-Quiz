@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="quiz.myapp.com.myappquiz.MainActivity"
+    android:weightSum="10"
+    android:orientation="vertical">-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="quiz.myapp.com.myappquiz.MainActivity"
+        android:orientation="vertical">
+  <!--  <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <!-- A RecyclerView with some commonly used attributes -->
+
+  <LinearLayout
+      android:layout_weight = "1"
+      android:id="@+id/mLlayoutStatusBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_above="@+id/my_recycler_view"
+      >
+    <!--android:paddingTop="10dp"-->
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        app:mpb_progressStyle="horizontal"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+    <!-- <ProgressBar
+         android:id="@+id/statusBar"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:layout_weight = "2"
+         android:indeterminate="false"
+         android:max="100"
+         android:progress="0"
+         style="@style/Widget.AppCompat.ProgressBar.Horizontal" />-->
+  </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7.5"
+        android:layout_below="@+id/mLlayoutStatusBar"/>
+  <!--android:layout_height="434dp"-->
+
+
+  <LinearLayout
+      android:layout_weight = "1.5"
+      android:id="@+id/mLlayoutBottomButtons"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      android:layout_below="@+id/my_recycler_view"
+      android:paddingBottom="10dp">
+    <!--android:layout_below="@+id/mLlayoutStatusBar"-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/btnBack"
+        android:text="@string/button_back"
+        android:layout_weight="0.75"
+        android:theme="@style/PrimaryFlatButton" />
+
+    <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+      android:text="@string/button_submit" android:layout_weight="0.75"
+      android:theme="@style/PrimaryFlatButton" />
+  </LinearLayout>
+
+<!--</android.support.constraint.ConstraintLayout>-->
+</LinearLayout>
+  <ProgressBar
+      android:id="@+id/PBloadQuestion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:visibility="invisible"
+      />
+</FrameLayout>
