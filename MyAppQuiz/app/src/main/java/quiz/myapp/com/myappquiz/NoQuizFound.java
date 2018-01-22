@@ -1,37 +1,25 @@
 package quiz.myapp.com.myappquiz;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.LineChart;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
-import com.squareup.picasso.Picasso;
 
 /**
- * Created by venkatesh on 11/19/2017.
+ * Created by venkatesh on 1/9/2018.
  */
 
-public class Score extends AppCompatActivity implements View.OnClickListener{
+public class NoQuizFound extends AppCompatActivity implements View.OnClickListener{
 
     private TextView txtProgress,scoreView;
     private ProgressBar progressBar;
@@ -39,78 +27,19 @@ public class Score extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
     public FirebaseUser user;
     private final int REQUEST_CODE=20,RESULT_CLOSE_APPLICATION=30;
-    private final String TAG = "SCORE_ACT";
-    private int pStatus=0,score;
-    private Handler handler = new Handler();
-    @Override
+    private final String TAG = "ERROR_ACT";
+    private int pStatus=0;
+    private String errorMSg="";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.no_quiz_image_layout);
         //setContentView(R.layout.activity_score);
-        setContentView(R.layout.chart_score_activity);
-        Intent intent = getIntent();
-        score=Integer.parseInt(intent.getStringExtra("SCORE"));
-        scoreView=(TextView)findViewById(R.id.scoreview);
-        //scoreView.setText(scoreView.getText()+String.valueOf(score));
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                // TODO Auto-generated method stub
-                while (pStatus < score) {
-                    pStatus += 1;
-
-                    handler.post(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            // TODO Auto-generated method stub
-                            progressBar.setProgress(pStatus);
-                            scoreView.setText("Validating Completion "+pStatus + "%...");
-                            if(pStatus==score)
-                            {
-                                //scoreView.setText("Your score: "+String.valueOf(score));
-                                scoreView.setText("Your have completed the Quiz!!!");
-                            }
-
-                        }
-                    });
-                    try {
-                        // Sleep for 200 milliseconds.
-                        // Just to display the progress slowly
-                        Thread.sleep(40); //thread will take approx 3 seconds to finish
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }).start();
-
-
-        //progressBar.setProgress(score);
-
-       /* Bitmap score_frame = BitmapFactory.decodeResource(getResources(), R.mipmap.score);
-        Bitmap newBitmap = Bitmap.createScaledBitmap(score_frame,dp2px(320),360,true);
-                //(originalImage, width, height, filter);
-        ImageView imageView = (ImageView) findViewById(R.id.iv);
-        imageView.setImageBitmap(newBitmap);*/
-
-        /*LineChart chart = (LineChart) findViewById(R.id.chart);*/
-
-
-        //imageView.setImageResource(R.mipmap.score);
-/*
-        Picasso.with(imageView.getContext())
-                .load("http://o.aolcdn.com/hss/storage/midas/19dcdabec46a02182add1b78b897392/202720874/google-pixel-c-1200.jpg")
-                .resize(dp2px(320), 0)
-                .into(imageView);
-*/
-
-
-
-
-
         mAuth = FirebaseAuth.getInstance();
+        Intent intent = getIntent();
+        errorMSg=intent.getStringExtra("ErrorMsg");
+        Log.d(TAG,"Error MEssage:"+errorMSg);
+        scoreView=(TextView)findViewById(R.id.noquizErrorTxtView);
+        scoreView.setText(errorMSg);
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -136,15 +65,6 @@ public class Score extends AppCompatActivity implements View.OnClickListener{
 
             }
         };
-    }
-
-    public int dp2px(int dp) {
-        WindowManager wm = (WindowManager) this.getBaseContext()
-                .getSystemService(Context.WINDOW_SERVICE);
-        Display display = wm.getDefaultDisplay();
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        display.getMetrics(displaymetrics);
-        return (int) (dp * displaymetrics.density + 0.5f);
     }
 
 
@@ -191,7 +111,7 @@ public class Score extends AppCompatActivity implements View.OnClickListener{
             case R.id.action_logout:
                 signUserOut();
                 Log.d(TAG, "Logout Selected");
-                Score.this.finish();
+                NoQuizFound.this.finish();
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
             // action with ID action_settings was selected
@@ -202,7 +122,7 @@ public class Score extends AppCompatActivity implements View.OnClickListener{
 
             case android.R.id.home:
                 signUserOut();
-                Score.this.finish();
+                NoQuizFound.this.finish();
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
 
@@ -217,6 +137,6 @@ public class Score extends AppCompatActivity implements View.OnClickListener{
     private void signUserOut() {
         // TODO: sign the user out
         mAuth.signOut();
-        Score.this.setResult(RESULT_CLOSE_APPLICATION);
+        NoQuizFound.this.setResult(RESULT_CLOSE_APPLICATION);
     }
 }

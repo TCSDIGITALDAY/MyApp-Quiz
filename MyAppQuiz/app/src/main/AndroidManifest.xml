@@ -57,6 +57,13 @@
                 android:value=".SignInActivity"/>
         </activity>
 
+        <activity android:name=".NoQuizFound"
+            android:parentActivityName=".SignInActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignInActivity"/>
+        </activity>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher"/>
