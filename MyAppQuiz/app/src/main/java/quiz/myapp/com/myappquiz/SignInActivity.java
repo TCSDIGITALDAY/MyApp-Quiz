@@ -39,6 +39,7 @@ public class SignInActivity extends AppCompatActivity
     private EditText etPass;
     private EditText etEmail;
     public ProgressBar signInWait;
+    public TextView forgotBtn;
     private int requestCode = 10;
     private boolean emailVerified=false;
 
@@ -61,6 +62,9 @@ public class SignInActivity extends AppCompatActivity
         etEmail = (EditText)findViewById(R.id.etEmailAddr);
         etPass = (EditText)findViewById(R.id.etPassword);
         signInWait = (ProgressBar) findViewById(R.id.PBsignIn);
+        forgotBtn=(TextView)findViewById(R.id.forgot_password);
+
+        findViewById(R.id.forgot_password).setOnClickListener(this);
 
         // TODO: Get a reference to the Firebase auth object
         mAuth = FirebaseAuth.getInstance();
@@ -195,7 +199,10 @@ public class SignInActivity extends AppCompatActivity
                 SignInActivity.this.setResult(RESULT_CLOSE_APPLICATION);
                 break;
 
-
+            case R.id.forgot_password:
+                Log.d(TAG, "Forgot Password:" );
+                forgotPassword();
+                break;
             /*case R.id.btnSignOut:
                 signUserOut();
                 break;*/
@@ -307,6 +314,13 @@ public class SignInActivity extends AppCompatActivity
                         }
                     }
                 });
+    }
+
+
+    private void forgotPassword()
+    {
+        Intent forgotIntent = new Intent(SignInActivity.this, activity_forgot.class);
+        SignInActivity.this.startActivityForResult(forgotIntent,REQUEST_CODE);
     }
 
     private void signUserOut() {

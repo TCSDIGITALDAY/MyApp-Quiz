@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "643040266078",
-    "firebase_url": "https://myapp-quiz.firebaseio.com",
-    "project_id": "myapp-quiz",
-    "storage_bucket": "myapp-quiz.appspot.com"
+    "project_number": "130138646367",
+    "firebase_url": "https://tcs-digital-day.firebaseio.com",
+    "project_id": "tcs-digital-day",
+    "storage_bucket": "tcs-digital-day.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:643040266078:android:2b04cc06d9de63ad",
+        "mobilesdk_app_id": "1:130138646367:android:c863f571cd4fb372",
         "android_client_info": {
-          "package_name": "quiz.myapp.com.myappquiz"
+          "package_name": "digitalday.cigna.tcs.com.tcsdigitalday"
         }
       },
       "oauth_client": [
         {
-          "client_id": "643040266078-j7af3t5e3dlfl4p03jo70bvspdid1ejv.apps.googleusercontent.com",
+          "client_id": "130138646367-d9e7f595916oqunlqn2srud1tndi2p5p.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "quiz.myapp.com.myappquiz",
+            "package_name": "digitalday.cigna.tcs.com.tcsdigitalday",
             "certificate_hash": "7bbbc8f21f7bbc6ee50ef568e0b3412d67f81065"
           }
         },
         {
-          "client_id": "643040266078-plnnhvtc6mup77480r7b70bfdqolb5i0.apps.googleusercontent.com",
+          "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA_dUtGW6q_sJwobFQc34jwLH21lneaqb0"
+          "current_key": "AIzaSyB5MNpdWMvMkZPnGwRrA8Yi54Bjkq5BSKw"
         }
       ],
       "services": {
@@ -40,10 +40,99 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "643040266078-plnnhvtc6mup77480r7b70bfdqolb5i0.apps.googleusercontent.com",
+              "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "130138646367-nc5ulfqqkv49pnpnd5eu2is6mukvlheb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shiva.Quizzler"
+              }
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130138646367:android:f6ef458b4393b466",
+        "android_client_info": {
+          "package_name": "com.myapp.myappquiz.Test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130138646367-f5ldudv0fiai31oir31fbjfjobml5q7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapp.myappquiz.Test",
+            "certificate_hash": "7bbbc8f21f7bbc6ee50ef568e0b3412d67f81065"
+          }
+        },
+        {
+          "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5MNpdWMvMkZPnGwRrA8Yi54Bjkq5BSKw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "130138646367-nc5ulfqqkv49pnpnd5eu2is6mukvlheb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shiva.Quizzler"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130138646367:android:2b04cc06d9de63ad",
+        "android_client_info": {
+          "package_name": "quiz.myapp.com.myappquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5MNpdWMvMkZPnGwRrA8Yi54Bjkq5BSKw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

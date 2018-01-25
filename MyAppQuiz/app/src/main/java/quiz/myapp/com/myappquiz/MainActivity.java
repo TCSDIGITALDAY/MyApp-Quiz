@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final int REQUEST_CODE = 20, RESULT_CLOSE_APPLICATION = 30;
     public Button btnSubmit, btnBack;
 
+
     public FirebaseUser user;
     Users muser;
     int score = 0, answer, question, prevQuestion = 0, prePosition = 0;
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String userid, firstClick = "Y", activeQuiz = "", reviewFlag = "",noActiveQuizFlag="N";
     public ArrayList<QuizContainer> quizData = null;
     private final String TAG = "MAIN_ACT";
-    private final int TOTAL_QUESTIONS = 4;
+    private  int TOTAL_QUESTIONS = 4;
     private long pStatus = 0, progress = 0;
     private double currentPercent = 0.00, incrementPercent = 0.00;
     private int numofQuestions = 0;
@@ -87,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        incrementPercent = (double) (100 / TOTAL_QUESTIONS);
-        Log.d(TAG, "Increment Pecent:" + incrementPercent);
+       /* incrementPercent = (double) (100 / TOTAL_QUESTIONS);
+        Log.d(TAG, "Increment Pecent:" + incrementPercent);*/
         resultSet = new HashMap<Integer, Integer>();
         Intent intent = getIntent();
         userid = intent.getStringExtra("USER_UID");
@@ -265,7 +267,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 Log.d(TAG,"Review Quiz Size:"+questionsList.size());
-
+                TOTAL_QUESTIONS=questionsList.size();
+                incrementPercent = (double) (100 / TOTAL_QUESTIONS);
+                Log.d(TAG, "Increment Pecent:" + incrementPercent);
                 for (QuizContainer record : quizData) {
 
                     Log.d(TAG, record.getQuestion() + ":" + record.getAnswer());
@@ -360,6 +364,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnBack).setOnClickListener(this);
 
         btnBack = (Button) findViewById(R.id.btnBack);
+
 
 
       /*  mUserData.addListenerForSingleValueEvent(new ValueEventListener() {

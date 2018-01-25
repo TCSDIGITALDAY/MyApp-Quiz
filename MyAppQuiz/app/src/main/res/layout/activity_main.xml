@@ -36,8 +36,9 @@
       android:orientation="vertical"
       android:layout_above="@+id/my_recycler_view"
       >
-
-
+<!--
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="30dp"-->
 
     <!--android:paddingTop="10dp"-->
 
@@ -45,9 +46,20 @@
         android:id="@+id/statusBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="5dp"
         android:indeterminate="false"
         app:mpb_progressStyle="horizontal"
         style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+
+    <!--<me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        app:mpb_progressStyle="horizontal"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />-->
+
+
     <!-- <ProgressBar
          android:id="@+id/statusBar"
          android:layout_width="match_parent"
