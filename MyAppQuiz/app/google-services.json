@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "130138646367-d9e7f595916oqunlqn2srud1tndi2p5p.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "digitalday.cigna.tcs.com.tcsdigitalday",
-            "certificate_hash": "7bbbc8f21f7bbc6ee50ef568e0b3412d67f81065"
-          }
-        },
-        {
           "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -37,20 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "130138646367-nc5ulfqqkv49pnpnd5eu2is6mukvlheb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.shiva.Quizzler"
-              }
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
@@ -62,57 +42,6 @@
         "mobilesdk_app_id": "1:130138646367:android:f6ef458b4393b466",
         "android_client_info": {
           "package_name": "com.myapp.myappquiz.Test"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "130138646367-f5ldudv0fiai31oir31fbjfjobml5q7c.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.myapp.myappquiz.Test",
-            "certificate_hash": "7bbbc8f21f7bbc6ee50ef568e0b3412d67f81065"
-          }
-        },
-        {
-          "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB5MNpdWMvMkZPnGwRrA8Yi54Bjkq5BSKw"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "130138646367-nc5ulfqqkv49pnpnd5eu2is6mukvlheb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.shiva.Quizzler"
-              }
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:130138646367:android:2b04cc06d9de63ad",
-        "android_client_info": {
-          "package_name": "quiz.myapp.com.myappquiz"
         }
       },
       "oauth_client": [
@@ -133,6 +62,57 @@
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130138646367:android:2b04cc06d9de63ad",
+        "android_client_info": {
+          "package_name": "quiz.myapp.com.myappquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130138646367-br5o4npks6eli8m6iqvtsd2a38frgdnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "quiz.myapp.com.myappquiz",
+            "certificate_hash": "7bbbc8f21f7bbc6ee50ef568e0b3412d67f81065"
+          }
+        },
+        {
+          "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5MNpdWMvMkZPnGwRrA8Yi54Bjkq5BSKw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130138646367-rchh9skdoiav8nns4f8l6s8n0ager4kj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "130138646367-nc5ulfqqkv49pnpnd5eu2is6mukvlheb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shiva.Quizzler"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2
