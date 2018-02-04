@@ -225,12 +225,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "onDataChange");
                 Log.d(TAG, "Count:" + dataSnapshot.getChildrenCount());
                 Log.d(TAG, "Has Child Exists:" + dataSnapshot.hasChildren());
-                Log.d(TAG, dataSnapshot.getChildren().toString());
+//                Log.d(TAG, dataSnapshot.getChildren().toString());
 
                 for (DataSnapshot jobSnapshot : dataSnapshot.getChildren()) {
                     String tmpQuestion = jobSnapshot.getKey();
                     numofQuestions++;
-
+                    Log.d(TAG, "value of tmpQuest: " + tmpQuestion);
+                    Log.d(TAG, "value of numofQuestions: " + numofQuestions);
                     //HashMap<String, Object> allData = (HashMap<String, Object>) dataSnapshot.getValue();
                    /* String[] yourChildArray = allData.keySet().toArray(new String[0]);
                     Log.d(TAG,"Child Aray:"+yourChildArray[0]);*/
@@ -624,7 +625,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         agendaDataset[3] = quizData.get(qno).getOption3();
         agendaDataset[4] = quizData.get(qno).getOption4();
         question = Integer.parseInt(quizData.get(qno).getQuestionNo());
-        answer = Integer.parseInt(quizData.get(qno).getAnswer());
+//        answer = Integer.parseInt(quizData.get(qno).getAnswer());
         //question = ;
        /* agendaDataset[0]="Select the component which is NOT part of Selenium suite.";
         agendaDataset[1]="Selenium IDE";
